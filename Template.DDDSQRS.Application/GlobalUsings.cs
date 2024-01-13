@@ -9,3 +9,7 @@ global using AutoMapper;
 global using Template.DDDSQRS.Application.Contracts.Persistence;
 global using Template.DDDSQRS.Application.Exceptions;
 global using Template.DDDSQRS.Domain.DTOs.CategoryDTOs;
+global using Microsoft.AspNetCore.Http;
+global using Template.DDDSQRS.Application.Contracts.Logger;
+global using ApplicationException = Template.DDDSQRS.Domain.Exceptions.ApplicationException;
+global using System.Text.Json;
