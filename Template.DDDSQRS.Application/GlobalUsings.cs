@@ -3,3 +3,8 @@ global using Template.DDDSQRS.Domain;
 global using Template.DDDSQRS.Domain.Common;
 global using System.Linq.Expressions;
 global using Template.DDDSQRS.Domain.Exceptions;
+global using Template.DDDSQRS.Application.Contracts.Messaging;
+global using Template.DDDSQRS.Domain.DTOs.ProductDTOs;
+global using AutoMapper;
+global using Template.DDDSQRS.Application.Contracts.Persistence;
+global using Template.DDDSQRS.Application.Exceptions;
