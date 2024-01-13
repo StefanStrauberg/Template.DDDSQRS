@@ -5,13 +5,3 @@ public abstract class ApplicationException(string title,
 {
     public string Title { get; set; } = title;
 }
-
-public abstract class BadRequestException(string message) 
-    : ApplicationException("Bad Request", message)
-{
-}
-
-public abstract class NotFoundException(string message)
-    : ApplicationException("Not Found", message)
-{
-}
