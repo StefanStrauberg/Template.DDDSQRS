@@ -3,7 +3,8 @@ namespace Template.DDDSQRS.Application.Features.Product.Commands.Delete;
 internal class DeleteProductCommandHandler(IProductRepository repository) 
     : ICommandHandler<DeleteProductCommand, Unit>
 {
-    readonly IProductRepository _repository = repository;
+    readonly IProductRepository _repository = repository
+        ?? throw new ArgumentNullException(nameof(repository));
 
     async Task<Unit> IRequestHandler<DeleteProductCommand, Unit>.Handle(DeleteProductCommand request,
                                                                         CancellationToken cancellationToken)

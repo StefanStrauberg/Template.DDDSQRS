@@ -8,3 +8,4 @@ global using Template.DDDSQRS.Domain.DTOs.ProductDTOs;
 global using AutoMapper;
 global using Template.DDDSQRS.Application.Contracts.Persistence;
 global using Template.DDDSQRS.Application.Exceptions;
+global using Template.DDDSQRS.Domain.DTOs.CategoryDTOs;

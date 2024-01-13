@@ -4,8 +4,10 @@ internal class CreateProductCommandHandler(IProductRepository repository,
                                            IMapper mapper) 
     : ICommandHandler<CreateProductCommand, Unit>
 {
-    readonly IProductRepository _repository = repository;
-    readonly IMapper _mapper = mapper;
+    readonly IProductRepository _repository = repository
+        ?? throw new ArgumentNullException(nameof(repository));
+    readonly IMapper _mapper = mapper
+        ?? throw new ArgumentNullException(nameof(mapper));
 
     async Task<Unit> IRequestHandler<CreateProductCommand, Unit>.Handle(CreateProductCommand request,
                                                                         CancellationToken cancellationToken)

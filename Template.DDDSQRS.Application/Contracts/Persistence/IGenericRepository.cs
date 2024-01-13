@@ -12,7 +12,7 @@ public interface IGenericRepository<TDocument>
                             CancellationToken token);
     Task InsertManyItemsAsync(IEnumerable<TDocument> documents,
                               CancellationToken token);
-    Task UpdateOneItemAsync(TDocument document,
+    Task UpdateItemAsync(TDocument document,
                             CancellationToken token);
     Task DeleteItemsAsync(Expression<Func<TDocument, bool>> expression,
                           CancellationToken token);
